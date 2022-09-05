@@ -1,6 +1,5 @@
 import numpy as np 
 from sympy import *
-from sympy import MutableDenseNDimArray, lambdify
 
 x,y =symbols('x y')
 z = symbols('z', real=False)
