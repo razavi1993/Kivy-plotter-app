@@ -1,0 +1,220 @@
+<FirstScreen>:	
+	BoxLayout:
+		orientation: "vertical"
+		Button:
+			text: "1D Functions"
+			on_press: root.manager.current = "SecondScreen"
+
+		Button:
+			text: "2D Functions"
+			on_press: root.manager.current = "ThirdScreen"
+
+		Button:
+			text: "Complex Functions"
+			on_press: root.manager.current = "FourthScreen"
+
+<SecondScreen>:
+	FloatLayout:
+		orinetation: 'vertical'
+		size: root.size
+
+		TextInput:
+			id: comp_func_1
+			font_size: 24
+			hint_text: "exp(-x**2) + sin(x) + 1/(1+x**2)"
+			multiline: False
+			size_hint: 0.56, 0.08
+			pos_hint: {'center_x': 0.4, 'center_y': 0.9}
+
+		Button:
+			id: plot_it_1
+			text: "Plot it!"
+			font_size: 28
+			background_color: 0.7,0.2,0.1,0.5
+			color: 0,0,1,1
+			size_hint: 0.19, 0.08
+			pos_hint: {'center_x': 0.78, 'center_y': 0.9}
+			on_press: root.plot_func()
+
+		Button:
+			id: remove_it_1
+			text: "Remove it!"
+			font_size: 28
+			background_color: 0.7,0.2,0.1,0.5
+			color: 0,0,1,1
+			size_hint: 0.19, 0.08
+			pos_hint: {'center_x': 0.78, 'center_y': 0.8}
+			on_press: root.remove_plot()
+
+		Label:
+			text: "Axes limits, nsteps:"
+			font_size: 20
+			color: 0,0,0,1
+			pos_hint: {'center_x': 0.25, 'center_y': 0.8}
+
+		TextInput:
+			id: axes_lims_nsteps_1
+			font_size: 20
+			hint_text: "-1.0,1.0,100"
+			multiline: False
+			size_hint: 0.3, 0.08
+			pos_hint: {'center_x': 0.53, 'center_y': 0.8}
+
+		Label:
+			id: error_1
+			text: ""
+			font_size: 20
+			color: 0,0,0,1
+			pos_hint: {'center_x': 0.4, 'center_y': 0.7}
+
+		Button:
+			id: back_to_menu_1
+			text: "Menu"
+			font_size: 28
+			background_color: 0.7,0.2,0.1,0.5
+			color: 0,0,1,1
+			size_hint: 0.19, 0.08
+			pos_hint: {'center_x': 0.78, 'center_y': 0.7}
+			on_press: root.back_to_menu()
+
+		FloatLayout:
+			orientation: "vertical"
+			id: layout_1
+
+
+<ThirdScreen>:
+	FloatLayout:
+		orinetation: 'vertical'
+		size: root.size
+
+		TextInput:
+			id: comp_func_2
+			font_size: 24
+			hint_text: "exp(-x**2-y**2) + sin(x*y) + x/(1+x**2+y**2)"
+			multiline: False
+			size_hint: 0.56, 0.08
+			pos_hint: {'center_x': 0.4, 'center_y': 0.9}
+
+		Button:
+			id: plot_it_2
+			text: "Plot it!"
+			font_size: 28
+			background_color: 0.7,0.2,0.1,0.5
+			color: 0,0,1,1
+			size_hint: 0.19, 0.08
+			pos_hint: {'center_x': 0.78, 'center_y': 0.9}
+			on_press: root.plot_func()
+
+		Button:
+			id: remove_it_2
+			text: "Remove it!"
+			font_size: 28
+			background_color: 0.7,0.2,0.1,0.5
+			color: 0,0,1,1
+			size_hint: 0.19, 0.08
+			pos_hint: {'center_x': 0.78, 'center_y': 0.8}
+			on_press: root.remove_plot()
+
+		Label:
+			text: "Axes limits, nsteps:"
+			font_size: 20
+			color: 0,0,0,1
+			pos_hint: {'center_x': 0.25, 'center_y': 0.8}
+
+		TextInput:
+			id: axes_lims_nsteps_2
+			font_size: 20
+			hint_text: "-1.0,1.0,-1.0,1.0,100"
+			multiline: False
+			size_hint: 0.3, 0.08
+			pos_hint: {'center_x': 0.53, 'center_y': 0.8}
+
+		Label:
+			id: error_2
+			text: ""
+			font_size: 20
+			color: 0,0,0,1
+			pos_hint: {'center_x': 0.4, 'center_y': 0.7}
+
+		Button:
+			id: back_to_menu_2
+			text: "Menu"
+			font_size: 28
+			background_color: 0.7,0.2,0.1,0.5
+			color: 0,0,1,1
+			size_hint: 0.19, 0.08
+			pos_hint: {'center_x': 0.78, 'center_y': 0.7}
+			on_press: root.back_to_menu()
+
+		FloatLayout:
+			orientation: "vertical"
+			id: layout_2
+
+
+<FourthScreen>:
+	FloatLayout:
+		orinetation: 'vertical'
+		size: root.size
+
+		TextInput:
+			id: comp_func_3
+			font_size: 24
+			hint_text: "zeta(z) + sin(z) + exp(-z**2)/(1+z**2)"
+			multiline: False
+			size_hint: 0.56, 0.08
+			pos_hint: {'center_x': 0.4, 'center_y': 0.9}
+
+		Button:
+			id: plot_it_3
+			text: "Plot it!"
+			font_size: 28
+			background_color: 0.7,0.2,0.1,0.5
+			color: 0,0,1,1
+			size_hint: 0.19, 0.08
+			pos_hint: {'center_x': 0.78, 'center_y': 0.9}
+			on_press: root.plot_func()
+
+		Button:
+			id: remove_it_3
+			text: "Remove it!"
+			font_size: 28
+			background_color: 0.7,0.2,0.1,0.5
+			color: 0,0,1,1
+			size_hint: 0.19, 0.08
+			pos_hint: {'center_x': 0.78, 'center_y': 0.8}
+			on_press: root.remove_plot()
+
+		Label:
+			text: "Axes limits, nsteps:"
+			font_size: 20
+			color: 0,0,0,1
+			pos_hint: {'center_x': 0.25, 'center_y': 0.8}
+
+		TextInput:
+			id: axes_lims_nsteps_3
+			font_size: 20
+			hint_text: "-1.0,1.0,-1.0,1.0,100,100"
+			multiline: False
+			size_hint: 0.3, 0.08
+			pos_hint: {'center_x': 0.53, 'center_y': 0.8}
+
+		Label:
+			id: error_3
+			text: ""
+			font_size: 20
+			color: 0,0,0,1
+			pos_hint: {'center_x': 0.4, 'center_y': 0.7}
+
+		Button:
+			id: back_to_menu_3
+			text: "Menu"
+			font_size: 28
+			background_color: 0.7,0.2,0.1,0.5
+			color: 0,0,1,1
+			size_hint: 0.19, 0.08
+			pos_hint: {'center_x': 0.78, 'center_y': 0.7}
+			on_press: root.back_to_menu()
+
+		FloatLayout:
+			orientation: "vertical"
+			id: layout_3
